@@ -8,6 +8,8 @@ Created on Mon Sep  3 17:09:20 2018
 
 from socket import socket, AF_INET, SOCK_STREAM
 
+import unittest as test
+
 class LazyConnection:
     def __init__(self, address, family=AF_INET, type=SOCK_STREAM):
         self.address = address
@@ -53,6 +55,7 @@ with conn1 as s:
             resp1= b''.join(iter(partial(s.recv, 8192), b''))
             print(resp1)
         
+
     
 #with conn as s:
     
