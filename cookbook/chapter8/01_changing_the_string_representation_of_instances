@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Sep  3 16:48:53 2018
+
+@author: son
+"""
+
+class Car1:
+    def __init__(self, model):
+        self.model = model;
+    def __repr__(self):
+        return 'car({0.model})'.format(self)
+    def __str__(self):
+        return 'car model is %s' %(self.model)
+            
+class Car:
+    def __init__(self, model):
+        self.model = model;
+    def __repr__(self):
+        return 'car({0.model})'.format(self)
+    def __str__(self):
+        return 'car model is {0.model}'.format(self)
+            
+        
+        
+car = Car("santafe")
+car1 = Car1("santafeDM")
+print(car);
+car;
+print(car1)
+
+
+f = open('/home/son/source/study/smart_study/cookbook/chapter8/test.dat')
+f
