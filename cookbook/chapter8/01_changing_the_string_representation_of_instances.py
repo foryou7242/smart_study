@@ -31,5 +31,5 @@ car;
 print(car1)
 
 
-f = open('/home/son/source/study/smart_study/cookbook/chapter8/test.dat')
-f
+f = open('test.dat')
+print(f)
