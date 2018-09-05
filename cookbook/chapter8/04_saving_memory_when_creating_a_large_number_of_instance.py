@@ -132,5 +132,5 @@ l = LeeSeongYoon('Lee Seong Yoon')
 print(s.name)
 print(k.name)
 print(l.name)
-
+#creating a new kind of class or instance attribute
 
