@@ -22,7 +22,6 @@ querystring = parse.urlencode(parms)
 # Make a GET request and read the response
 #u = request.urlopen(url+'?' + querystring)
 u = request.urlopen(url+'?', querystring.encode('ascii'))
-print(u.header_items())
 print(u.geturl())
 print(':'.join(hex(x)[2:] for x in querystring.encode('ascii')))
 
