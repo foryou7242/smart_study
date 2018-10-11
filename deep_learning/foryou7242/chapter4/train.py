@@ -36,7 +36,7 @@ for i in range(iters_num):
     plt.figure()
     plt.xlim([0, 100])
     plt.ylim([0, 3])
-    plt.xlabel('x')
+    plt.xlabel('x')     
     plt.ylabel('loss')
     plt.plot(i_his,train_loss_list)
     plt.grid()

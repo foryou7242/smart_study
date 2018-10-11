@@ -9,12 +9,10 @@ Created on Thu Oct  4 20:11:29 2018
 import numpy as np
 from functions import *
 import lossFunction as lf
-from gradient import numerical_gradient
 import numerical_diff as nd
 
 class TwoLayerNet:
-    def __init__(self, input_size, hidden_size, output_size,
-        weight_init_std=0.01):
+    def __init__(self, input_size, hidden_size, output_size,weight_init_std=0.01):
         self.params = {}
         self.params['W1'] = weight_init_std* np.random.randn(input_size, hidden_size)
         self.params['b1'] = np.zeros(hidden_size)
