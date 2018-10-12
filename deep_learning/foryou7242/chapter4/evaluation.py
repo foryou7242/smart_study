@@ -17,10 +17,11 @@ train_loss_list = []
 train_acc_list = []
 test_acc_list =[]
 
-iters_num = 1000
+iters_num = 6000
 train_size = x_train.shape[0]
 batch_size = 100
 iter_per_epoch = max(train_size/batch_size, 1)
+
 
 
 learning_rate = 0.1
@@ -30,10 +31,10 @@ for i in range(iters_num):
     batch_mask = np.random.choice(train_size, batch_size)
     x_batch = x_train[batch_mask]
     t_batch = t_train[batch_mask]
-    print('start')
+    #print('start')
     a = network.predict(x_batch)
     grad = network.numerical_gradient(x_batch, t_batch)
-    print('end')
+    #print('end')
     for key in ('W1', 'b1' ,'W2', 'b2'):
         network.params[key] -= learning_rate * grad[key]
     
